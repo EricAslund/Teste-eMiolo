@@ -8,7 +8,8 @@ OR
 
 npm init -y
 
-e logo depois 
+e logo depois
+
 yarn start
 
 OR

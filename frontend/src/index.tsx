@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import cors from 'cors';
+
 
 import App from './App';
 

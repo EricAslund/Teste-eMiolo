@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios, { AxiosResponse } from "axios";
 
-
 import { GoogleLogin, googleLogout} from '@react-oauth/google';
+import {Image ,Button,Row,Col} from 'react-bootstrap'
 
 
 interface AuthResponse {
@@ -54,14 +54,23 @@ const GoogleAuth = () => {
 
       {user && (
         <>
-          <img src={user.avatar} className="rounded-full" />
-          <h1 className="text-xl font-semibold text-center my-5">
+
+    <Row >
+      <Col sm={2}>
+          <Image src={user.avatar} className="rounded-full"  roundedCircle={true} width={'35px'} style={{margin: '4px'}} />
+          </Col >
+          <Col sm>
+          <h6 style={{fontSize: '1rem'}}>
             {user.name}
-          </h1>
-          <h1 className="text-xl font-semibold text-center my-5">
+          </h6>
+          <h6 style={{fontSize: '0.8rem'}} >
             {user.email}
-          </h1>
-          <button onClick={logOut}>Log out</button>
+          </h6>
+          </Col>
+          <Col sm>
+          <Button onClick={logOut} variant="dark">Log out</Button>
+          </Col>
+          </Row>
         </>
       )}
     </div>

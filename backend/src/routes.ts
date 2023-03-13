@@ -40,11 +40,11 @@ routes.post('/auth', async (req, res) => {
        await user.save();
     
       
-      res.json({ payload, token });
-  }else{
+      
+  }
   res.json({ user, token });
   }
-  }
+  
 
       
 );
